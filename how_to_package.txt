@@ -1,0 +1,15 @@
+conda create -n myenv python=3.8
+conda activate myenv
+conda install numpy matplotlib pyqt
+pip install pyinstaller
+pyinstaller  --windowed --hidden-import=numpy --hidden-import=matplotlib --hidden-import=PyQt5   --hidden-import=PyQt5.QtCore --hidden-import=PyQt5.QtGui --hidden-import=PyQt5.QtWidgets read.py
+
+conda create -n myenv2 python=3.10
+conda activate myenv2
+conda install numpy matplotlib tzdata
+pip install pyinstaller
+pyinstaller -windowed --hidden-import=matplotlib.backends.backend_tkagg --hidden-import=matplotlib.figure --hidden-import=matplotlib.ticker  --hidden-import=matplotlib.dates --hidden-import=matplotlib.pyplot --hidden-import=zoneinfo._zoneinfo --hidden-import=concurrent.futures.thread --hidden-import=numpy.core._methods new_plot.py
+
+pip install nuitka
+nuitka --standalone  --enable-plugin=tk-inter  --enable-plugin=matplotlib  --windows-disable-console new_plot.py
+
