@@ -17,7 +17,7 @@
 
 ## ⚡ 功能截图
 
-![image-20250829200956722](C:\Users\11214\AppData\Roaming\Typora\typora-user-images\image-20250829200956722.png)
+![](image-20250829200956722.png)
 
 ------
 
